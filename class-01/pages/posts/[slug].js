@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 export default function Post() {
@@ -5,8 +6,16 @@ export default function Post() {
 
     console.log(router)
     return (
-        <div> 
+        <div>
             Página de Post {router.query.slug}
+
+            <ul>
+                <li>
+                    <Link href="/">
+                        Go to Home
+                    </Link>
+                </li>
+            </ul>
         </div>
     )
 }
